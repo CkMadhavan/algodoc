@@ -1,0 +1,48 @@
+<html>
+  
+  <head><title>AlgoDoc</title>
+  </head>
+
+  <body style=overflow:auto;background-repeat:no-repeat;background-size:cover;background-image:url({{url_for('static' , filename = '266471.jpg')}})>
+                <div style=width:60%;background:#cccccc;left:0;right:0;border-radius:15px;margin-right:auto;margin-left:auto;padding:20px;>
+                <center><img src = {{url_for('static' , filename = 'logo.jpg')}} width=250px height=150px></center>
+                    <div style=background:#fff;border-radius:15px;padding:10px;>
+                        
+      <center><h2>Select An Chest X-Ray Image To Predict The Respiratory Diseases It May Contain</h2><br>
+      <h5>Please Note That It May Take A Few Seconds To Generate The Prediction</h5><br>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <form id="uploader" action = "/uploader" method = "POST" accept="image/jpg , image/jpeg , image/png" enctype = "multipart/form-data">
+        <input type = "file" name = "file" id = "imgInp"/><br><br>
+        <img id="blah" src="#" width=500px height=500px /><br><br>
+        <input type = "submit">
+      </form></center>
+    </center>
+    </div>              
+                  <br>
+      <center><a href={{url_for('hel')}}>KNOW MORE</a></center><br>
+      <center><a href='https://drive.google.com/file/d/17pyRyT2zWVnQShQtt6f2EEfB5ZtsiIPc/view?usp=drivesdk'>GET WINDOWS APP</a></center><br>
+      <center><a href='https://drive.google.com/file/d/15wT2UU8FMUKZvM5mMrRnB-vV2qIdKqYP/view?usp=drivesdk'>GET LINUX APP</a></center>
+    </div>
+     <script>
+    
+        function readURL(input) {
+
+          if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function(e) {
+              $('#blah').attr('src', e.target.result);
+            }
+
+            reader.readAsDataURL(input.files[0]);
+          }
+        }
+
+        $("#imgInp").change(function() {
+          readURL(this);
+        });
+
+    </script>
+  </body>
+  
+</html>

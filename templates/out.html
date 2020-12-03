@@ -1,0 +1,28 @@
+<html>
+  
+  <head><title>AlgoDoc</title>
+  </head>
+
+  <body style=background-repeat:no-repeat;background-size:cover;background-image:url({{url_for('static' , filename = '266471.jpg')}})>
+                <div style=width:60%;background:#cccccc;left:0;right:0;border-radius:15px;margin-right:auto;margin-left:auto;padding:20px;>
+                <center><img src = {{url_for('static' , filename = 'logo.jpg')}} width=250px height=150px></center>
+                    <div style=background:#fff;border-radius:15px;padding:10px;>
+                        
+                        
+      <center>
+      {%for j in range(0 , i|length)%}
+      <h2>{{i[j]}}</h2>
+      {%endfor%}
+      </center>
+      <center><br><b>Please note that a given X-ray can contain more than 1 disease (Therefore The Predicted Percentage Probabilities Need Not Add Up To 100%)</b></center>
+    </center>
+    </div>              
+                  <br>
+      <center><a href={{url_for('hel')}}>KNOW MORE</a></center><br>
+      <center><a href='https://drive.google.com/file/d/17pyRyT2zWVnQShQtt6f2EEfB5ZtsiIPc/view?usp=drivesdk'>GET WINDOWS APP</a></center><br>
+      <center><a href='https://drive.google.com/file/d/15wT2UU8FMUKZvM5mMrRnB-vV2qIdKqYP/view?usp=drivesdk'>GET LINUX APP</a></center>
+    
+    </div>
+  </body>
+
+</html>
